@@ -156,6 +156,68 @@ section {
     margin-right: auto;
 }
 
+/* Teaching Section */
+.teaching {
+    background: white;
+}
+
+.teaching-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.teaching-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teaching-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.teaching-card i {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.teaching-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.teaching-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.teaching-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.teaching-card ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.teaching-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
@@ -291,6 +353,7 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
     }
     
     .hero h2 {
@@ -304,6 +367,10 @@ footer {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .teaching-content {
+        grid-template-columns: 1fr;
     }
     
     .contact-info {
